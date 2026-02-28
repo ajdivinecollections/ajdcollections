@@ -4,128 +4,220 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AJ Divine Collections | Women's Wallets & Handbags</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f5f2;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-header {
-    background-color: #d63384;
-    color: white;
-    padding: 20px;
-    text-align: center;
+body{
+    background:#fdf8f6;
+    color:#333;
 }
 
-nav {
-    background-color: #b0256b;
-    text-align: center;
-    padding: 10px;
+/* HEADER */
+header{
+    background:#111;
+    color:#fff;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+header h1{
+    font-size:22px;
+    letter-spacing:1px;
 }
 
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #ffe3ec;
+nav a{
+    color:#fff;
+    margin-left:25px;
+    text-decoration:none;
+    font-weight:500;
 }
 
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+nav a:hover{
+    color:#f8b400;
 }
 
-.product {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin: 15px;
-    width: 250px;
-    padding: 15px;
-    text-align: center;
+/* HERO */
+.hero{
+    height:80vh;
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1584917865442-de89df76afd3');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
 }
 
-.product img {
-    width: 100%;
-    border-radius: 10px;
+.hero h2{
+    font-size:48px;
+    margin-bottom:15px;
 }
 
-button {
-    background-color: #d63384;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
 }
 
-button:hover {
-    background-color: #b0256b;
+.hero button{
+    padding:12px 25px;
+    border:none;
+    background:#f8b400;
+    color:#111;
+    font-weight:600;
+    cursor:pointer;
+    border-radius:5px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+.hero button:hover{
+    background:#fff;
+}
+
+/* PRODUCTS */
+.products{
+    padding:60px 10%;
+    text-align:center;
+}
+
+.products h2{
+    margin-bottom:40px;
+    font-size:32px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.product{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.product:hover{
+    transform:translateY(-10px);
+}
+
+.product img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.product h3{
+    margin:15px 0 10px;
+}
+
+.price{
+    color:#f8b400;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.product button{
+    padding:10px 20px;
+    border:none;
+    background:#111;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.product button:hover{
+    background:#f8b400;
+    color:#111;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+footer p{
+    margin-bottom:10px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .hero h2{
+        font-size:32px;
+    }
 }
 </style>
 </head>
+
 <body>
 
 <header>
     <h1>AJ Divine Collections</h1>
-    <p>Premium Women's Wallets & Handbags</p>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Shop</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Shop</a>
-    <a href="#">Contact</a>
-</nav>
-
 <section class="hero">
-    <h2>Style Meets Elegance</h2>
-    <p>Discover our latest collection of premium handbags and wallets</p>
+    <h2>Luxury That Completes Your Style</h2>
+    <p>Premium Women's Wallets & Handbags Designed for Elegance</p>
+    <button onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
 </section>
 
-<section class="products">
+<section class="products" id="products">
+    <h2>Featured Products</h2>
 
-    <div class="product">
-        <img src="https://via.placeholder.com/250x250" alt="Leather Wallet">
-        <h3>Classic Leather Wallet</h3>
-        <p>$39.99</p>
-        <button>Buy Now</button>
+    <div class="product-grid">
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e" alt="Leather Wallet">
+            <h3>Classic Leather Wallet</h3>
+            <p class="price">$39.99</p>
+            <button>Order Now</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3" alt="Handbag">
+            <h3>Premium Handbag</h3>
+            <p class="price">$89.99</p>
+            <button>Order Now</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="Crossbody Bag">
+            <h3>Stylish Crossbody Bag</h3>
+            <p class="price">$59.99</p>
+            <button>Order Now</button>
+        </div>
+
     </div>
-
-    <div class="product">
-        <img src="https://via.placeholder.com/250x250" alt="Designer Handbag">
-        <h3>Designer Handbag</h3>
-        <p>$79.99</p>
-        <button>Buy Now</button>
-    </div>
-
-    <div class="product">
-        <img src="https://via.placeholder.com/250x250" alt="Mini Crossbody Bag">
-        <h3>Mini Crossbody Bag</h3>
-        <p>$59.99</p>
-        <button>Buy Now</button>
-    </div>
-
 </section>
 
-<footer>
-    <p>© 2026 AJ Divine Collections | All Rights Reserved</p>
+<footer id="contact">
+    <p><strong>AJ Divine Collections</strong></p>
+    <p>Email: support@ajdivinecollections.com</p>
+    <p>© 2026 All Rights Reserved</p>
 </footer>
 
 </body>
