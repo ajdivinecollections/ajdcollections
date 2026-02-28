@@ -188,11 +188,32 @@ footer p{
 .thumbs img:hover {
     border: 2px solid #f8b400;
 }
-.logo img{
+/* BRAND SECTION */
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand img{
     height:50px;
     width:auto;
 }
 
+.brand-text h1{
+    font-size:20px;
+    margin:0;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.brand-text span{
+    font-size:14px;
+    color:#f8b400;
+    letter-spacing:2px;
+}
+
+/* HEADER UPDATE */
 header{
     background:#111;
     color:#fff;
@@ -207,8 +228,13 @@ header{
 <body>
 
 <header>
-    <div class="logo">
+
+    <div class="brand">
         <img src="images/logo.png" alt="AJ Divine Collections Logo">
+        <div class="brand-text">
+            <h1>AJ Divine</h1>
+            <span>Collections</span>
+        </div>
     </div>
 
     <nav>
@@ -216,6 +242,7 @@ header{
         <a href="#products">Shop</a>
         <a href="#contact">Contact</a>
     </nav>
+
 </header>
 
 <section class="hero">
@@ -312,6 +339,7 @@ function changeImage(id, src) {
 </script>
 </body>
 </html>
+
 
 
 
