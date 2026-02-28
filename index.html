@@ -188,13 +188,29 @@ footer p{
 .thumbs img:hover {
     border: 2px solid #f8b400;
 }
+.logo img{
+    height:50px;
+    width:auto;
+}
+
+header{
+    background:#111;
+    color:#fff;
+    padding:15px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>AJ Divine Collections</h1>
+    <div class="logo">
+        <img src="images/logo.png" alt="AJ Divine Collections Logo">
+    </div>
+
     <nav>
         <a href="#">Home</a>
         <a href="#products">Shop</a>
@@ -216,7 +232,7 @@ footer p{
         <div class="product">
 
     <div class="product-images">
-        <img id="ck-wallet-main" src="images/ck-front1.jpg" alt="Premium Handbag">
+        <img id="ck-wallet-main" src="images/ck-front1.jpeg" alt="Premium Handbag">
 
         <div class="thumbs">
             <img src="images/ck-front1.jpeg" onclick="changeImage('ck-wallet-main', this.src)">
@@ -296,6 +312,7 @@ function changeImage(id, src) {
 </script>
 </body>
 </html>
+
 
 
 
