@@ -165,6 +165,29 @@ footer p{
         font-size:32px;
     }
 }
+    .product-images img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.thumbs {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.thumbs img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.thumbs img:hover {
+    border: 2px solid #f8b400;
+}
 </style>
 </head>
 
@@ -198,6 +221,7 @@ footer p{
         <div class="thumbs">
             <img src="images/ck-brown.jpg" onclick="changeImage('wallet1-main', this.src)">
             <img src="images/ck-colours.jpg" onclick="changeImage('wallet1-main', this.src)">
+            <img src="images/ck-brown.jpg" onclick="changeImage('wallet1-main', this.src)">
         </div>
     </div>
 
@@ -272,9 +296,14 @@ footer p{
     <p>Email: support@ajdivinecollections.com</p>
     <p>© 2026 All Rights Reserved</p>
 </footer>
-
+<script>
+function changeImage(id, src) {
+    document.getElementById(id).src = src;
+}
+</script>
 </body>
 </html>
+
 
 
 
