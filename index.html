@@ -8,6 +8,65 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+    /* PREMIUM GALLERY MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+/* Zoom effect */
+.modal-content:hover {
+    transform: scale(1.2);
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    padding: 15px;
+    user-select: none;
+}
+
+.prev { left: 40px; }
+.next { right: 40px; }
+
+.prev:hover, .next:hover, .close:hover {
+    color: #f8b400;
+}
 *{
     margin:0;
     padding:0;
@@ -290,7 +349,13 @@ header{
         <div class="product">
 
     <div class="product-images">
-        <img id="ck-wallet-main" src="images/ck-front1.jpeg" alt="Premium Handbag" onclick="openModal(this.src)">
+        <img id="ck-wallet-main"
+     src="images/ck-front1.jpeg"
+     onclick="openGallery([
+        'images/ck-front1.jpeg',
+        'images/ck-front2.jpeg',
+        'images/ck-back.jpeg'
+     ], 0)">
 
         <div class="thumbs">
             <img src="images/ck-front1.jpeg" onclick="changeImage('ck-wallet-main', this.src)">
@@ -313,8 +378,12 @@ header{
        <div class="product">
 
     <div class="product-images">
-        <img id="zara-wallet-main" src="images/zara-black.jpeg" alt="Premium Handbag" onclick="openModal(this.src)">
-
+       <img id="zara-wallet-main"
+     src="images/zara-black.jpeg"
+     onclick="openGallery([
+        'images/zara-black.jpeg',
+        'images/zara-green.jpeg'
+     ], 0)">
         <div class="thumbs">
             <img src="images/zara-black.jpeg" onclick="changeImage('zara-wallet-main', this.src)">
             <img src="images/zara-green.jpeg" onclick="changeImage('zara-wallet-main', this.src)">
@@ -333,7 +402,13 @@ header{
  <div class="product">
 
     <div class="product-images">
-        <img id="cd-wallet-main" src="images/cd-brown-front.jpeg" alt="Premium Handbag" onclick="openModal(this.src)">
+        <img id="cd-wallet-main"
+     src="images/cd-brown-front.jpeg"
+     onclick="openGallery([
+        'images/cd-brown-front.jpeg',
+        'images/cd-brown-side.jpeg',
+        'images/cd-colours.jpeg'
+     ], 0)">
 
         <div class="thumbs">
             <img src="images/cd-brown-front.jpeg" onclick="changeImage('cd-wallet-main', this.src)">
@@ -355,7 +430,11 @@ header{
             <div class="product">
 
     <div class="product-images">
-        <img id="vlm-wallet-main" src="images/velmora-brown.jpeg" alt="Premium Handbag" onclick="openModal(this.src)">
+        <img id="vlm-wallet-main"
+     src="images/velmora-brown.jpeg"
+     onclick="openGallery([
+        'images/velmora-brown.jpeg'
+     ], 0)">
 
         <div class="thumbs">
             <img src="images/velmora-brown.jpeg" onclick="changeImage('vlm-wallet-main', this.src)">
@@ -385,21 +464,65 @@ header{
     <img class="modal-content" id="modalImage">
 </div>
 <script>
+let currentImages = [];
+let currentIndex = 0;
+
 function changeImage(id, src) {
     document.getElementById(id).src = src;
 }
 
-function openModal(src) {
-    document.getElementById("imageModal").style.display = "block";
-    document.getElementById("modalImage").src = src;
+function openGallery(images, index) {
+    currentImages = images;
+    currentIndex = index;
+
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+
+    modal.style.display = "flex";
+    modalImg.src = currentImages[currentIndex];
 }
 
 function closeModal() {
     document.getElementById("imageModal").style.display = "none";
 }
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    document.getElementById("modalImage").src = currentImages[currentIndex];
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    document.getElementById("modalImage").src = currentImages[currentIndex];
+}
+
+// Close when clicking outside image
+window.onclick = function(e) {
+    const modal = document.getElementById("imageModal");
+    if (e.target === modal) {
+        closeModal();
+    }
+};
+
+// Keyboard support
+document.addEventListener("keydown", function(e) {
+    if (document.getElementById("imageModal").style.display === "flex") {
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+        if (e.key === "Escape") closeModal();
+    }
+});
 </script>
+    <!-- Advanced Image Modal -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <span class="prev" onclick="prevImage()">❮</span>
+    <img class="modal-content" id="modalImage">
+    <span class="next" onclick="nextImage()">❯</span>
+</div>
 </body>
 </html>
+
 
 
 
