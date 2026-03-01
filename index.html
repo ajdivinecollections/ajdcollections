@@ -13,12 +13,10 @@
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
     inset: 0;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0,0,0,0.96);
     justify-content: center;
     align-items: center;
-    animation: fadeIn 0.3s ease;
 }
 
 @keyframes fadeIn {
@@ -27,8 +25,11 @@
 }
 
 .modal-content {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     border-radius: 12px;
     transition: transform 0.3s ease;
     cursor: zoom-in;
@@ -511,7 +512,7 @@ header{
     <p class="price">₹549</p>
     <p>The bag features a dark brown/black background with a repeating gold monogram-style pattern, reminiscent of luxury designer motifs.</p>
     <a class="whatsapp-btn" 
-   href="https://wa.me/919390186232?text=Hi%20I%20want%20to%20order%20Premium%20VelMora%20Handbag%20for%20₹799"
+   href="https://wa.me/919390186232?text=Hi%20I%20want%20to%20order%20Premium%20VelMora%20Handbag%20for%20₹549"
    target="_blank">
    Order on WhatsApp
 </a>
@@ -578,9 +579,16 @@ function prevImage() {
 
 function toggleZoom() {
     const img = document.getElementById("modalImage");
+
     isZoomed = !isZoomed;
-    img.style.transform = isZoomed ? "scale(1.8)" : "scale(1)";
-    img.style.cursor = isZoomed ? "zoom-out" : "zoom-in";
+
+    if (isZoomed) {
+        img.style.transform = "scale(1.4)";
+        img.style.cursor = "zoom-out";
+    } else {
+        img.style.transform = "scale(1)";
+        img.style.cursor = "zoom-in";
+    }
 }
 
 function updateThumbnails() {
@@ -656,6 +664,7 @@ document.addEventListener("touchend", e => {
 </div>
 </body>
 </html>
+
 
 
 
