@@ -31,8 +31,9 @@
     height: auto;
     object-fit: contain;
     border-radius: 12px;
-    transition: transform 0.3s ease;
+    transition: transform 0.25s ease;
     cursor: zoom-in;
+    transform-origin: center center;
 }
 
 /* Zoom effect */
@@ -583,7 +584,7 @@ function toggleZoom() {
     isZoomed = !isZoomed;
 
     if (isZoomed) {
-        img.style.transform = "scale(1.4)";
+        img.style.transform = "scale(1.25)";
         img.style.cursor = "zoom-out";
     } else {
         img.style.transform = "scale(1)";
@@ -664,6 +665,7 @@ document.addEventListener("touchend", e => {
 </div>
 </body>
 </html>
+
 
 
 
