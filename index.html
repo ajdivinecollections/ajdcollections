@@ -3,11 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AJ Divine Collections - Premium women's handbags and wallets at affordable prices. Order now via WhatsApp.">
+<meta name="keywords" content="handbags, wallets, women bags, AJ Divine Collections, handbags India">
+<meta name="author" content="AJ Divine Collections">
+
+<meta property="og:title" content="AJ Divine Collections">
+<meta property="og:description" content="Premium handbags & wallets for elegant women">
+<meta property="og:image" content="https://ajdivinecollections.in/images/ck-front1.jpeg">
+<meta property="og:url" content="https://ajdivinecollections.in">
+<link rel="icon" href="images/fevicon-logo.jpeg">
 <title>AJ Divine Collections | Women's Wallets & Handbags</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+html{
+    scroll-behavior:smooth;
+}
 *{
     margin:0;
     padding:0;
@@ -288,6 +300,34 @@ header{
 .active-thumb {
     border: 2px solid #f8b400;
 }
+.whatsapp-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 18px;
+    background:#25D366;
+    color:white;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+    background:#1ebe5d;
+}
+
+.floating-whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    font-size:24px;
+    padding:12px 16px;
+    border-radius:50%;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
 </style>
 </head>
 
@@ -325,7 +365,7 @@ header{
         <div class="product">
 
     <div class="product-images">
-        <img id="ck-wallet-main"
+        <img loading="lazy" id="ck-wallet-main"
      src="images/ck-front1.jpeg"
      onclick="openGallery([
         'images/ck-front1.jpeg',
@@ -354,7 +394,7 @@ header{
        <div class="product">
 
     <div class="product-images">
-      <img id="zara-wallet-main"
+      <img loading="lazy" id="zara-wallet-main"
      src="images/zara-black.jpeg"
      onclick="openGallery([
         'images/zara-black.jpeg',
@@ -379,7 +419,7 @@ header{
  <div class="product">
 
     <div class="product-images">
-        <img id="cd-wallet-main"
+        <img loading="lazy" id="cd-wallet-main"
      src="images/cd-brown-front.jpeg"
      onclick="openGallery([
         'images/cd-brown-front.jpeg',
@@ -407,7 +447,7 @@ header{
             <div class="product">
 
     <div class="product-images">
-        <img id="vlm-wallet-main"
+        <img loading="lazy" id="vlm-wallet-main"
      src="images/velmora-brown.jpeg"
      onclick="openGallery([
         'images/velmora-brown.jpeg'
@@ -428,17 +468,18 @@ header{
 
 </div>
 </section>
-
+<section class="trust">
+  <h2>Why Choose Us?</h2>
+  <p>✔ Premium Quality</p>
+  <p>✔ Affordable Prices</p>
+  <p>✔ Quick WhatsApp Support</p>
+  <p>✔ Fast Delivery Across India</p>
+</section>
 <footer id="contact">
     <p><strong>AJ Divine Collections</strong></p>
     <p>Email: support@ajdivinecollections.com</p>
     <p>© 2026 All Rights Reserved</p>
 </footer>
-<!-- Image Modal -->
-<div id="imageModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modalImage">
-</div>
 <script>
 let currentImages = [];
 let currentIndex = 0;
@@ -557,6 +598,10 @@ document.addEventListener("touchend", e => {
 
     <div id="modalThumbs" class="modal-thumbs"></div>
 </div>
+    <a href="https://wa.me/919390186232" 
+   class="floating-whatsapp" 
+   target="_blank">💬</a>
 </body>
 </html>
+
 
