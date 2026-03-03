@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AJ Divine Collections | Women's Wallets & Handbags</title>
-
-<!-- Favicon -->
-<link rel="icon" type="image/jpeg" href="images/fevicon-logo.jpeg">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -17,80 +13,40 @@
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
-}
-
-/* ===== Apple-style minimal theme ===== */
-:root{
-    --black:#111;
-    --soft-black:#1d1d1f;
-    --gray:#f5f5f7;
-    --light:#ffffff;
-    --accent:#d4af37;
 }
 
 body{
-    background:var(--gray);
+    background:#fdf8f6;
     color:#333;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
-    background:var(--soft-black);
+    background:#111;
     color:#fff;
-    padding:15px 8%;
+    padding:20px 10%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
 }
 
-.brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.brand img{
-    height:45px;
-}
-
-.brand-text h1{
-    font-size:20px;
-    margin:0;
-    font-weight:600;
+header h1{
+    font-size:22px;
     letter-spacing:1px;
-}
-
-.brand-text span{
-    font-size:14px;
-    color:#f8b400;
-    letter-spacing:2px;
-}
-    
-nav{
-    display:flex;
 }
 
 nav a{
     color:#fff;
-    text-decoration:none;
     margin-left:25px;
+    text-decoration:none;
+    font-weight:500;
 }
 
 nav a:hover{
-    color:var(--accent);
+    color:#f8b400;
 }
 
-.menu-toggle{
-    display:none;
-    font-size:26px;
-    cursor:pointer;
-}
-
-/* ===== HERO ===== */
+/* HERO */
 .hero{
     height:80vh;
     background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
@@ -130,191 +86,215 @@ nav a:hover{
     background:#fff;
 }
 
-
-/* ===== PRODUCTS ===== */
+/* PRODUCTS */
 .products{
-    padding:70px 8%;
+    padding:60px 10%;
     text-align:center;
+}
+
+.products h2{
+    margin-bottom:40px;
+    font-size:32px;
 }
 
 .product-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:30px;
-    margin-top:30px;
 }
 
 .product{
     background:#fff;
     padding:20px;
-    border-radius:16px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
-    transition:.3s;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
 
 .product:hover{
-    transform:translateY(-6px);
+    transform:translateY(-10px);
 }
 
 .product img{
     width:100%;
-    height:260px;
+    height:250px;
     object-fit:cover;
-    border-radius:12px;
-    cursor:pointer;
+    border-radius:8px;
+}
+
+.product h3{
+    margin:15px 0 10px;
 }
 
 .price{
-    color:var(--accent);
+    color:#f8b400;
     font-weight:600;
+    margin-bottom:10px;
 }
 
-.whatsapp-btn{
-    display:inline-block;
-    padding:10px 18px;
-    background:#25D366;
-    color:white;
-    border-radius:6px;
-    text-decoration:none;
-    margin-top:10px;
-}
-
-/* ===== TESTIMONIALS ===== */
-.testimonials{
-    padding:70px 8%;
-    background:white;
-    text-align:center;
-}
-
-.testimonial-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    margin-top:30px;
-}
-
-.review-card{
-    background:#fff;
-    padding:25px;
-    border-radius:16px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-}
-
-.review-img{
-    width:160px;
-    border-radius:12px;
-    margin-bottom:12px;
-}
-
-/* ===== CONTACT ===== */
-.contact{
-    padding:60px 8%;
-    text-align:center;
+.product button{
+    padding:10px 20px;
+    border:none;
     background:#111;
     color:white;
-}
-
-.contact-btn{
-    display:inline-block;
-    margin-top:10px;
-    padding:12px 25px;
-    background:#f8b400;
-    color:#111;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:600;
-}
-
-/* ===== FOOTER ===== */
-footer{
-    background:#000;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
-
-/* ===== MODAL ===== */
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.95);
-    justify-content:center;
-    align-items:center;
-    z-index:2000;
-}
-
-.modal img{
-    max-width:80%;
-    max-height:80%;
-}
-
-.close{
-    position:absolute;
-    top:20px;
-    right:30px;
-    font-size:35px;
-    color:white;
+    border-radius:5px;
     cursor:pointer;
 }
 
-/* ===== FLOATING WHATSAPP ===== */
-.whatsapp-float{
-    position:fixed;
-    bottom:25px;
-    right:25px;
-    background:#25D366;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
-    animation:pulse 2s infinite;
-    z-index:3000;
+.product button:hover{
+    background:#f8b400;
+    color:#111;
 }
 
-.whatsapp-float img{
-    width:32px;
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
 }
 
-@keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(37,211,102,.6);}
-    70%{box-shadow:0 0 0 14px rgba(37,211,102,0);}
-    100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+footer p{
+    margin-bottom:10px;
 }
 
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media(max-width:768px){
-    nav{
-        display:none;
-        flex-direction:column;
-        position:absolute;
-        top:65px;
-        right:0;
-        background:#111;
-        padding:15px;
+    .hero h2{
+        font-size:32px;
     }
+}
+    .product-images img {
+    width: 100%;
+    border-radius: 8px;
+}
 
-    nav a{ margin:10px 0; }
-    .menu-toggle{ display:block; }
-    .hero h2{ font-size:30px; }
+.thumbs {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.thumbs img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.thumbs img:hover {
+    border: 2px solid #f8b400;
+}
+/* BRAND SECTION */
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand img{
+    height:50px;
+    width:auto;
+}
+
+.brand-text h1{
+    font-size:20px;
+    margin:0;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.brand-text span{
+    font-size:14px;
+    color:#f8b400;
+    letter-spacing:2px;
+}
+
+/* HEADER UPDATE */
+header{
+    background:#111;
+    color:#fff;
+    padding:15px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+/* PREMIUM MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.96);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2000;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 70%;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.prev { left: 40px; }
+.next { right: 40px; }
+
+.counter {
+    margin-top: 15px;
+    color: white;
+    font-size: 16px;
+}
+
+.modal-thumbs {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.modal-thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid transparent;
+}
+
+.active-thumb {
+    border: 2px solid #f8b400;
 }
 </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXCXLLSHHD"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-ZXCXLLSHHD');
-</script>
 </head>
 
 <body>
 
 <header>
+
     <div class="brand">
         <img src="images/logo.png" alt="AJ Divine Collections Logo">
         <div class="brand-text">
@@ -323,88 +303,260 @@ gtag('config', 'G-ZXCXLLSHHD');
         </div>
     </div>
 
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Shop</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<nav id="navMenu">
-<a href="#">Home</a>
-<a href="#products">Shop</a>
-<a href="#testimonials">Reviews</a>
-<a href="#contact">Contact</a>
-</nav>
 </header>
 
 <section class="hero">
-<h2>Luxury That Completes Your Style</h2>
-<button onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
+    <h2>Luxury That Completes Your Style</h2>
+    <p>Premium Women's Wallets & Handbags Designed for Elegance</p>
+    <button onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
 </section>
 
-<section id="products" class="products">
-<h2>Featured Products</h2>
+<section class="products" id="products">
+    <h2>Featured Products</h2>
 
-<div class="product-grid">
-<div class="product"><img src="images/ck-front1.jpeg" onclick="openModal(this.src)"><h3>CK Premium Handbag</h3><p class="price">₹699</p><a class="whatsapp-btn" href="https://wa.me/919390186232">Order on WhatsApp</a></div>
-<div class="product"><img src="images/zara-black.jpeg" onclick="openModal(this.src)"><h3>ZARA Premium Handbag</h3><p class="price">₹799</p><a class="whatsapp-btn" href="https://wa.me/919390186232">Order on WhatsApp</a></div>
-<div class="product"><img src="images/cd-brown-front.jpeg" onclick="openModal(this.src)"><h3>Christian Dior Handbag</h3><p class="price">₹799</p><a class="whatsapp-btn" href="https://wa.me/919390186232">Order on WhatsApp</a></div>
-<div class="product"><img src="images/velmora-brown.jpeg" onclick="openModal(this.src)"><h3>Louis Vuitton Style Bag</h3><p class="price">₹549</p><a class="whatsapp-btn" href="https://wa.me/919390186232">Order on WhatsApp</a></div>
-</div>
-</section>
+    <div class="product-grid">
 
-<!-- WhatsApp Image Testimonials -->
-<section id="testimonials" class="testimonials">
-<h2>Customer Reviews ❤️</h2>
+        <div class="product">
 
-<div class="testimonial-grid">
-<div class="review-card"><img src="images/testimony1.jpeg" class="review-img"><p>⭐⭐⭐⭐⭐ Amazing quality and fast delivery!</p></div>
-<div class="review-card"><img src="images/testimony2.jpeg" class="review-img"><p>⭐⭐⭐⭐⭐ Loved the design. Looks premium!</p></div>
-<div class="review-card"><img src="images/testimony3.jpeg" class="review-img"><p>⭐⭐⭐⭐⭐ Worth every rupee ❤️</p></div>
-</div>
-</section>
+    <div class="product-images">
+        <img id="ck-wallet-main"
+     src="images/ck-front1.jpeg"
+     onclick="openGallery([
+        'images/ck-front1.jpeg',
+        'images/ck-front2.jpeg',
+        'images/ck-back.jpeg'
+     ])">
 
-<section id="contact" class="contact">
-<h2>Contact Us</h2>
-<p>📧 support@ajdivinecollections.com</p>
-<p>📞 +91 9390186232</p>
-<a href="https://wa.me/919390186232" class="contact-btn">Chat on WhatsApp</a>
-</section>
+        <div class="thumbs">
+            <img src="images/ck-front1.jpeg" onclick="changeImage('ck-wallet-main', this.src)">
+            <img src="images/ck-front2.jpeg" onclick="changeImage('ck-wallet-main', this.src)">
+            <img src="images/ck-back.jpeg" onclick="changeImage('ck-wallet-main', this.src)">
+        </div>
+    </div>
 
-<footer>
-© 2026 AJ Divine Collections
-</footer>
-
-<!-- Modal -->
-<div id="modal" class="modal">
-<span class="close" onclick="closeModal()">×</span>
-<img id="modalImg">
-</div>
-
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/919390186232?text=Hi%20I%20want%20to%20buy%20a%20bag" class="whatsapp-float" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+    <h3>CK Premium Handbag</h3>
+    <p class="price">₹699</p>
+    <p>The colour combination makes the bag look modern and versatile for different outfits.</p>
+    <a class="whatsapp-btn" 
+   href="https://wa.me/919390186232?text=Hi%20I%20want%20to%20order%20Premium%20CK%20Handbag%20for%20₹699"
+   target="_blank">
+   Order on WhatsApp
 </a>
 
+</div>
+
+       <div class="product">
+
+    <div class="product-images">
+      <img id="zara-wallet-main"
+     src="images/zara-black.jpeg"
+     onclick="openGallery([
+        'images/zara-black.jpeg',
+        'images/zara-green.jpeg'
+     ])">
+        
+        <div class="thumbs">
+            <img src="images/zara-black.jpeg" onclick="changeImage('zara-wallet-main', this.src)">
+            <img src="images/zara-green.jpeg" onclick="changeImage('zara-wallet-main', this.src)">
+        </div>
+    </div>
+
+    <h3>ZARA Premium Handbag</h3>
+    <p class="price">₹799</p>
+    <p>A royal pastel green and black bag with high quality to carry everywhere</p>
+    <a class="whatsapp-btn" 
+   href="https://wa.me/919390186232?text=Hi%20I%20want%20to%20order%20Premium%20Zara%20Handbag%20for%20₹799"
+   target="_blank">
+   Order on WhatsApp
+</a>
+</div>
+ <div class="product">
+
+    <div class="product-images">
+        <img id="cd-wallet-main"
+     src="images/cd-brown-front.jpeg"
+     onclick="openGallery([
+        'images/cd-brown-front.jpeg',
+        'images/cd-brown-side.jpeg',
+        'images/cd-colours.jpeg'
+     ])">
+
+        <div class="thumbs">
+            <img src="images/cd-brown-front.jpeg" onclick="changeImage('cd-wallet-main', this.src)">
+            <img src="images/cd-brown-side.jpeg" onclick="changeImage('cd-wallet-main', this.src)">
+            <img src="images/cd-colours.jpeg" onclick="changeImage('cd-wallet-main', this.src)">
+        </div>
+    </div>
+
+    <h3>Christian Dior Premium Handbag</h3>
+    <p class="price">₹799</p>
+    <p>It’s a sleek, designer-inspired crossbody bag that combines elegance with everyday practicality.</p>
+    <a class="whatsapp-btn" 
+   href="https://wa.me/919390186232?text=Hi%20I%20want%20to%20order%20Premium%20Christian%20Dior%20Handbag%20for%20₹799"
+   target="_blank">
+   Order on WhatsApp
+</a>
+
+</div>
+            <div class="product">
+
+    <div class="product-images">
+        <img id="vlm-wallet-main"
+     src="images/velmora-brown.jpeg"
+     onclick="openGallery([
+        'images/velmora-brown.jpeg'
+     ])">
+        <div class="thumbs">
+            <img src="images/velmora-brown.jpeg" onclick="changeImage('vlm-wallet-main', this.src)">
+        </div>
+    </div>
+
+    <h3>Louis Vuitton Premium Handbag</h3>
+    <p class="price">₹549</p>
+    <p>The bag features a dark brown/black background with a repeating gold monogram-style pattern, reminiscent of luxury designer motifs.</p>
+    <a class="whatsapp-btn" 
+   href="https://wa.me/919390186232?text=Hi%20I%20want%20to%20order%20Premium%20Louis%20Vuitton%20Handbag%20for%20₹549"
+   target="_blank">
+   Order on WhatsApp
+</a>
+
+</div>
+</section>
+
+<footer id="contact">
+    <p><strong>AJ Divine Collections</strong></p>
+    <p>Email: support@ajdivinecollections.com</p>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
 <script>
-function toggleMenu(){
-    const nav=document.getElementById("navMenu");
-    nav.style.display = nav.style.display==="flex"?"none":"flex";
+let currentImages = [];
+let currentIndex = 0;
+let autoSlideInterval = null;
+let isZoomed = false;
+let startX = 0;
+
+function changeImage(id, src) {
+    document.getElementById(id).src = src;
 }
 
-function openModal(src){
-    document.getElementById("modal").style.display="flex";
-    document.getElementById("modalImg").src=src;
+function openGallery(images, index = 0) {
+    currentImages = images;
+    currentIndex = index;
+
+    document.getElementById("imageModal").style.display = "flex";
+    updateModal();
+    startAutoSlide();
 }
 
-function closeModal(){
-    document.getElementById("modal").style.display="none";
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+    stopAutoSlide();
+    isZoomed = false;
+    document.getElementById("modalImage").style.transform = "scale(1)";
 }
+
+function updateModal() {
+    const modalImg = document.getElementById("modalImage");
+    modalImg.src = currentImages[currentIndex];
+
+    document.getElementById("imageCounter").innerText =
+        (currentIndex + 1) + " / " + currentImages.length;
+
+    updateThumbnails();
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    updateModal();
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    updateModal();
+}
+
+function toggleZoom() {
+    const img = document.getElementById("modalImage");
+    isZoomed = !isZoomed;
+    img.style.transform = isZoomed ? "scale(1.8)" : "scale(1)";
+    img.style.cursor = isZoomed ? "zoom-out" : "zoom-in";
+}
+
+function updateThumbnails() {
+    const container = document.getElementById("modalThumbs");
+    container.innerHTML = "";
+
+    currentImages.forEach((img, index) => {
+        const thumb = document.createElement("img");
+        thumb.src = img;
+        thumb.className = "modal-thumb";
+        if (index === currentIndex) thumb.classList.add("active-thumb");
+        thumb.onclick = () => {
+            currentIndex = index;
+            updateModal();
+        };
+        container.appendChild(thumb);
+    });
+}
+
+// Auto Slide
+function startAutoSlide() {
+    stopAutoSlide();
+    autoSlideInterval = setInterval(nextImage, 4000);
+}
+
+function stopAutoSlide() {
+    if (autoSlideInterval) clearInterval(autoSlideInterval);
+}
+
+// Click outside close
+window.onclick = function(e) {
+    if (e.target.id === "imageModal") closeModal();
+};
+
+// Keyboard navigation
+document.addEventListener("keydown", function(e) {
+    if (document.getElementById("imageModal").style.display === "flex") {
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+        if (e.key === "Escape") closeModal();
+    }
+});
+
+// Swipe support
+document.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+});
+
+document.addEventListener("touchend", e => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) nextImage();
+    if (endX - startX > 50) prevImage();
+});
 </script>
+<!-- ULTRA PREMIUM MODAL -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <span class="prev" onclick="prevImage()">❮</span>
+    <img id="modalImage" class="modal-content" onclick="toggleZoom()">
+    <span class="next" onclick="nextImage()">❯</span>
+
+    <div id="imageCounter" class="counter"></div>
+
+    <div id="modalThumbs" class="modal-thumbs"></div>
+</div>
 </body>
-
 </html>
-
-
-
-
-
-
-
 
