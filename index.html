@@ -92,18 +92,18 @@ nav a:hover{
 
 /* ===== HERO ===== */
 .hero{
-    height:85vh;
-    background:
-      linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-      url('https://images.unsplash.com/photo-1584917865442-de89df76afd3');
+    height:80vh;
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1584917865442-de89df76afd3');
     background-size:cover;
     background-position:center;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    flex-direction:column;
-    color:white;
     text-align:center;
+    color:white;
+    padding:20px;
 }
 
 .hero h2{
@@ -111,13 +111,25 @@ nav a:hover{
     margin-bottom:15px;
 }
 
-.hero button{
-    padding:12px 28px;
-    background:var(--accent);
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
 }
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    background:#f8b400;
+    color:#111;
+    font-weight:600;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.hero button:hover{
+    background:#fff;
+}
+
 
 /* ===== PRODUCTS ===== */
 .products{
@@ -387,6 +399,7 @@ function closeModal(){
 </body>
 
 </html>
+
 
 
 
