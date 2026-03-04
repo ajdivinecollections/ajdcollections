@@ -35,6 +35,25 @@ z-index:1000;
 .brand-text h1{font-size:18px;line-height:1.1;}
 .brand-text span{font-size:13px;color:var(--accent);letter-spacing:2px;}
 
+nav{
+    display:flex;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+}
+
+nav a:hover{
+    color:var(--accent);
+}
+.menu-toggle{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
 /* HERO */
 .hero{
 height:70vh;
@@ -239,19 +258,45 @@ z-index:3000;
 }
 
 .whatsapp-float img{width:32px;}
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+    nav{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:65px;
+        right:0;
+        background:#111;
+        padding:15px;
+    }
+
+    nav a{ margin:10px 0; }
+    .menu-toggle{ display:block; }
+    .hero h2{ font-size:30px; }
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="brand">
-<img src="images/logo.png">
-<div class="brand-text">
-<h1>AJ<br>Divine</h1>
-<span>COLLECTIONS</span>
-</div>
-</div>
+    <div class="brand">
+        <img src="images/logo.png" alt="AJ Divine Collections Logo">
+        <div class="brand-text">
+            <h1>AJ Divine</h1>
+            <span>Collections</span>
+        </div>
+    </div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="navMenu">
+<a href="#">Home</a>
+<a href="#products">Shop</a>
+<a href="#testimonials">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
@@ -330,23 +375,27 @@ z-index:3000;
 </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials">
+<!-- WhatsApp Image Testimonials -->
+<section id="testimonials" class="testimonials">
 <h2>Customer Reviews ❤️</h2>
+
 <div class="testimonial-grid">
-<div class="review-card"><img src="images/testimony1.jpeg" class="review-img"><p>⭐⭐⭐⭐⭐ Amazing quality!</p></div>
-<div class="review-card"><img src="images/testimony2.jpeg" class="review-img"><p>⭐⭐⭐⭐⭐ Looks premium!</p></div>
+<div class="review-card"><img src="images/testimony1.jpeg" class="review-img"><p>⭐⭐⭐⭐⭐ Amazing quality and fast delivery!</p></div>
+<div class="review-card"><img src="images/testimony2.jpeg" class="review-img"><p>⭐⭐⭐⭐⭐ Loved the design. Looks premium!</p></div>
 <div class="review-card"><img src="images/testimony3.jpeg" class="review-img"><p>⭐⭐⭐⭐⭐ Worth every rupee ❤️</p></div>
 </div>
 </section>
 
-<section class="contact">
+<section id="contact" class="contact">
 <h2>Contact Us</h2>
+<p>📧 support@ajdivinecollections.com</p>
 <p>📞 +91 9390186232</p>
 <a href="https://wa.me/919390186232" class="contact-btn">Chat on WhatsApp</a>
 </section>
 
 <footer>
+<p>Follow us:</p>
+<p>Instagram | Facebook | WhatsApp</p>
 © 2026 AJ Divine Collections
 </footer>
 
@@ -422,4 +471,3 @@ if(endX-startX>50) prevImage();
 
 </body>
 </html>
-
