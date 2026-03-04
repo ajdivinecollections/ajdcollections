@@ -383,7 +383,9 @@ thumb.classList.add("active");
 
 mainImg.addEventListener("click",()=>{
 currentImages=images;
-currentIndex=images.indexOf(mainImg.getAttribute("src"));
+const currentSrc = mainImg.src;
+currentIndex = images.findIndex(img => currentSrc.includes(img));
+if(currentIndex === -1) currentIndex = 0;
 openLightbox(currentImages[currentIndex]);
 });
 });
@@ -420,3 +422,4 @@ if(endX-startX>50) prevImage();
 
 </body>
 </html>
+
