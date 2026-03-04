@@ -99,19 +99,42 @@ transition:.3s;
 
 .product:hover{transform:translateY(-6px);}
 
-.product-images{overflow:hidden;position:relative;}
-
 .main-img{
-width:100%;
-height:260px;
-object-fit:cover;
-border-radius:12px;
-transition:transform .4s ease;
-cursor:pointer;
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    display:block;
+    transition: transform .4s ease;
+}
+
+
+.product-images{
+    text-align:center;
+}
+
+.image-wrapper{
+    overflow:hidden;
+    border-radius:12px;
+}
+
+/* Hover zoom ONLY on wrapper */
+.image-wrapper:hover .main-img{
+    transform: scale(1.15);
+}
+
+.thumbs{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin-top:10px;
 }
 
 .product-images:hover .main-img{
-transform:scale(1.2);
+    transform: scale(1.12);
+}
+
+.product-images:hover{
+    cursor:zoom-in;
 }
 
 .thumbs{
@@ -273,7 +296,6 @@ z-index:3000;
     nav a{ margin:10px 0; }
     .menu-toggle{ display:block; }
     .hero h2{ font-size:30px; }
-}
 
 </style>
 </head>
@@ -314,14 +336,21 @@ z-index:3000;
 
 <!-- CK -->
 <div class="product" data-images='["images/ck-front1.jpeg","images/ck-front2.jpeg","images/ck-back.jpeg"]'>
-<div class="product-images">
-<img class="main-img" src="images/ck-front1.jpeg">
-<div class="thumbs">
-<img src="images/ck-front1.jpeg">
-<img src="images/ck-front2.jpeg">
-<img src="images/ck-back.jpeg">
-</div>
-</div>
+ <div class="product-images">
+
+      <!-- ZOOM AREA -->
+      <div class="image-wrapper">
+          <img class="main-img" src="images/ck-front1.jpeg">
+      </div>
+
+      <!-- THUMBNAILS (outside zoom area) -->
+      <div class="thumbs">
+          <img src="images/ck-front1.jpeg">
+          <img src="images/ck-front2.jpeg">
+          <img src="images/ck-back.jpeg">
+      </div>
+
+  </div>
 <h3>CK Premium Handbag</h3>
 <p class="price">₹699</p>
 <a class="whatsapp-btn" href="https://wa.me/919390186232">Order on WhatsApp</a>
@@ -329,13 +358,17 @@ z-index:3000;
 
 <!-- ZARA -->
 <div class="product" data-images='["images/zara-black.jpeg","images/zara-black2.jpeg","images/zara-black3.jpeg"]'>
-<div class="product-images">
-<img class="main-img" src="images/zara-black.jpeg">
-<div class="thumbs">
-<img src="images/zara-black.jpeg">
-<img src="images/zara-black2.jpeg">
-<img src="images/zara-black3.jpeg">
-</div>
+ <div class="product-images">
+      <!-- ZOOM AREA -->
+	<div class="image-wrapper">
+		<img class="main-img" src="images/zara-black.jpeg">
+	</div>
+      <!-- THUMBNAILS (outside zoom area) -->
+	<div class="thumbs">
+		<img src="images/zara-black.jpeg">
+		<img src="images/zara-black2.jpeg">
+		<img src="images/zara-black3.jpeg">
+	</div>
 </div>
 <h3>ZARA Premium Handbag</h3>
 <p class="price">₹799</p>
@@ -344,13 +377,17 @@ z-index:3000;
 
 <!-- CD -->
 <div class="product" data-images='["images/cd-brown-front.jpeg","images/cd-brown-back.jpeg","images/cd-brown-side.jpeg"]'>
-<div class="product-images">
-<img class="main-img" src="images/cd-brown-front.jpeg">
-<div class="thumbs">
-<img src="images/cd-brown-front.jpeg">
-<img src="images/cd-brown-back.jpeg">
-<img src="images/cd-brown-side.jpeg">
-</div>
+ <div class="product-images">
+      <!-- ZOOM AREA -->
+	<div class="image-wrapper">
+		<img class="main-img" src="images/cd-brown-front.jpeg">
+	</div>
+      <!-- THUMBNAILS (outside zoom area) -->
+	<div class="thumbs">
+		<img src="images/cd-brown-front.jpeg">
+		<img src="images/cd-brown-back.jpeg">
+		<img src="images/cd-brown-side.jpeg">
+	</div>
 </div>
 <h3>Christian Dior Handbag</h3>
 <p class="price">₹799</p>
@@ -360,12 +397,16 @@ z-index:3000;
 <!-- LV STYLE -->
 <div class="product" data-images='["images/velmora-brown.jpeg","images/velmora-brown2.jpeg","images/velmora-brown3.jpeg"]'>
 <div class="product-images">
-<img class="main-img" src="images/velmora-brown.jpeg">
-<div class="thumbs">
-<img src="images/velmora-brown.jpeg">
-<img src="images/velmora-brown2.jpeg">
-<img src="images/velmora-brown3.jpeg">
-</div>
+      <!-- ZOOM AREA -->
+	<div class="image-wrapper">
+		<img class="main-img" src="images/velmora-brown.jpeg">
+	</div>
+      <!-- THUMBNAILS (outside zoom area) -->
+	<div class="thumbs">
+		<img src="images/velmora-brown.jpeg">
+		<img src="images/velmora-brown2.jpeg">
+		<img src="images/velmora-brown3.jpeg">
+	</div>
 </div>
 <h3>Louis Vuitton Style Bag</h3>
 <p class="price">₹549</p>
