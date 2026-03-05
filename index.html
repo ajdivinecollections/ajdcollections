@@ -454,6 +454,11 @@ z-index:3000;
 </a>
 
 <script>
+function toggleMenu(){
+    const nav=document.getElementById("navMenu");
+    nav.style.display = nav.style.display==="flex"?"none":"flex";
+}
+
 let currentImages=[];
 let currentIndex=0;
 
@@ -512,3 +517,4 @@ if(endX-startX>50) prevImage();
 
 </body>
 </html>
+
