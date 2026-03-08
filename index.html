@@ -28,7 +28,40 @@ position:sticky;
 top:0;
 z-index:1000;
 }
+.image-wrapper{
+    overflow:hidden;
+    border-radius:12px;
+    position:relative;
+}
 
+/* Badge style */
+.badge{
+position:absolute;
+top:8px;
+left:8px;
+padding:6px 12px;
+font-size:11px;
+font-weight:700;
+border-radius:20px;
+z-index:10;
+}
+
+/* Bright badges */
+.badge.best{
+background:#FFD700;
+color:#111;
+}
+
+.badge.new{
+background:#25D366;
+color:white;
+}
+
+.badge.hot{
+background:#ff7a00;
+color:white;
+}
+	
 .brand{display:flex;align-items:center;gap:10px;}
 .brand img{height:45px;}
 
@@ -112,10 +145,6 @@ transition:.3s;
     text-align:center;
 }
 
-.image-wrapper{
-    overflow:hidden;
-    border-radius:12px;
-}
 
 /* Hover zoom ONLY on wrapper */
 .image-wrapper:hover .main-img{
@@ -340,6 +369,7 @@ z-index:3000;
 
       <!-- ZOOM AREA -->
       <div class="image-wrapper">
+		  <div class="badge new">NEW</div>
           <img class="main-img" src="images/lv-hg001-side.jpg">
       </div>
 
@@ -362,6 +392,7 @@ z-index:3000;
  <div class="product-images">
       <!-- ZOOM AREA -->
 	<div class="image-wrapper">
+		<div class="badge new">NEW</div>
 		<img class="main-img" src="images/lv-hg002-side.jpg">
 	</div>
       <!-- THUMBNAILS (outside zoom area) -->
@@ -381,6 +412,7 @@ z-index:3000;
  <div class="product-images">
       <!-- ZOOM AREA -->
 	<div class="image-wrapper">
+		<div class="badge new">NEW</div>
 		<img class="main-img" src="images/lv-hg003-front.jpg">
 	</div>
       <!-- THUMBNAILS (outside zoom area) -->
@@ -400,6 +432,7 @@ z-index:3000;
 <div class="product-images">
       <!-- ZOOM AREA -->
 	<div class="image-wrapper">
+		<div class="badge new">NEW</div>
 		<img class="main-img" src="images/lv-hg004-side.jpg">
 	</div>
       <!-- THUMBNAILS (outside zoom area) -->
@@ -419,6 +452,7 @@ z-index:3000;
 <div class="product-images">
       <!-- ZOOM AREA -->
 	<div class="image-wrapper">
+		<div class="badge best">BEST SELLER</div>
 		<img class="main-img" src="images/hbl004-front.jpeg">
 	</div>
       <!-- THUMBNAILS (outside zoom area) -->
@@ -439,6 +473,7 @@ z-index:3000;
 <div class="product-images">
       <!-- ZOOM AREA -->
 	<div class="image-wrapper">
+		<div class="badge best">BEST SELLER</div>
 		<img class="main-img" src="images/hbl001-front.jpeg">
 	</div>
       <!-- THUMBNAILS (outside zoom area) -->
@@ -706,6 +741,7 @@ closeLightbox();
 
 </body>
 </html>
+
 
 
 
