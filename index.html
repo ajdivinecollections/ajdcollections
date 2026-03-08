@@ -679,10 +679,34 @@ let endX=e.changedTouches[0].clientX;
 if(startX-endX>50) nextImage();
 if(endX-startX>50) prevImage();
 });
+
+// KEYBOARD ARROW CONTROL
+document.addEventListener("keydown", function(e){
+
+const lightbox = document.getElementById("lightbox");
+
+if(lightbox.style.display === "flex"){
+
+if(e.key === "ArrowRight"){
+nextImage();
+}
+
+if(e.key === "ArrowLeft"){
+prevImage();
+}
+
+if(e.key === "Escape"){
+closeLightbox();
+}
+
+}
+
+});
 </script>
 
 </body>
 </html>
+
 
 
 
